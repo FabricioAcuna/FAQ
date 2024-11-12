@@ -13,6 +13,11 @@ sectionElements.forEach(function (sectionElement) {
   sectionElement.addEventListener("click", toggle);
 });
 
+function toggle(e) {
+  const plusEl = e.currentTarget;
+  plusEl.classList.toggle("active");
+}
+
 //p2.2
 
 const postElement = document.getElementsByClassName("accordion");
@@ -24,7 +29,7 @@ async function getPosts() {
   data.forEach((post) => {
     const postEl = document.createElement("div");
     postEl.setAttribute("class", "title");
-    postEl.textContent = post.title;
+    postEl.innerHTML = `<i class="fa fa-plus"></i> ${post.title}`;
     postEl.addEventListener("click", toggle);
 
     const postEl2 = document.createElement("div");
@@ -39,5 +44,4 @@ async function getPosts() {
     // }
   });
 }
-
 getPosts();

@@ -7,9 +7,10 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.accordion div:nth-child() {
-  background-color: red;
+.accordion div:nth-child(3n) {
+  background-color: blue;
 }
+
 h1 {
   display: flex;
   justify-content: center;
@@ -19,23 +20,26 @@ h1 {
   height: 100px;
   margin: 0px;
   font-size: 40px;
+  border: solid black 2px;
 }
 .title {
   display: flex;
+  align-items: center;
   background-color: cadetblue;
-  text-align: center;
-  flex-direction: column;
-  height: 50px;
+  height: 60px;
+  cursor: pointer;
   width: 650px;
+  text-indent: 30px;
   border-bottom: lightgray solid 1px;
 }
 
 .title:hover {
   background-color: rgba(5, 100, 105, 0.959);
+  font-size: 18px;
 }
 .description {
   display: none;
-  height: 50px;
+  height: 60px;
   width: 650px;
   background-color: white;
   text-indent: 20px;
