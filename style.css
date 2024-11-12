@@ -7,9 +7,6 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.accordion div:nth-child(3n) {
-  background-color: blue;
-}
 
 h1 {
   display: flex;
@@ -47,4 +44,8 @@ h1 {
 
 .title.active + .description {
   display: block;
+}
+
+.accordion div:nth-of-type(even) .title {
+  background-color: lightblue;
 }
