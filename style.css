@@ -1,0 +1,46 @@
+html {
+  background: #f2f1f4;
+  color: #19171c;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accordion div:nth-child() {
+  background-color: red;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  width: 650px;
+  height: 100px;
+  margin: 0px;
+  font-size: 40px;
+}
+.title {
+  display: flex;
+  background-color: cadetblue;
+  text-align: center;
+  flex-direction: column;
+  height: 50px;
+  width: 650px;
+  border-bottom: lightgray solid 1px;
+}
+
+.title:hover {
+  background-color: rgba(5, 100, 105, 0.959);
+}
+.description {
+  display: none;
+  height: 50px;
+  width: 650px;
+  background-color: white;
+  text-indent: 20px;
+}
+
+.title.active + .description {
+  display: block;
+}
